@@ -3,62 +3,61 @@
 
   <head>
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.12/angular.js" data-semver="1.4.9"></script>
     <script src="app.js"></script>
-  </head>
+  </head> 
 
   <body ng-controller="MainCtrl">
-<!--First Page: Creating an account-->
- <h1>Friends</h1>
-  <br>
-  <h3>Create Account:</h3>
-  <p>First Name:</p>
-  <input type="text" name="fistName">
-  <p>Last Name:</p>
-  <input type="text" name="lastName">
-  <p>Phone Number:</p>
-  <input type="text" name="phoneNumber">
-  <p>Age</p>
-  <select name="day">
-    <option value="16-25">16-25</option>
-    <option value="26-35">26-35</option>
-    <option value="36-45">36-45</option>
-    <option value="46-55">46-55</option>
-    <option value="55+">55+</option>
-  </select>
-  <p>Ethnicity</p>
-  <input type="text" name="ethincity">
-  <p>Address:</p>
-  <input type="text" name="Address">
-  <br>
-  <button type="button">Next</button>
+    <!--Start Page-->
+    <div class="header">
+      <h1 class="app-name">Country Roads</h1>
+      <p class="app-statement">Getting you home safely since 2020 pandemic</p>
+    </div>
 
-<!--Second page: Extra information-->
+    <div class="initial-nav">
+      <div class="nav-button"><a href="#">Create Profile</a></div>
+      <div class="nav-button"><a href="#">Login</a></div>
+    </div>
 
-<br>
-<br>
+    <div class="map-div">
+      <input type="text" placeholder="Take me home"></input>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.6616313359746!2d174.78083669593784!3d-41.294468131597405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afda8b60ae29%3A0xe3a742a32db1bc85!2sANZ%20Office!5e0!3m2!1sen!2snz!4v1598064471450!5m2!1sen!2snz" class="map" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <button type="button">Emergency</button>
+    </div>
+    
+    <!--Login Page
+    <h1>Friends</h1>
+    <p>Email:</p>
+    <input type="text" name="email">
+    <p>Password:</p>
+    <input type="password" name="password">
+    <br>
+    <br>
+    <input class="radio" type="radio" name="usertype" value="Staff" ng-model="userType" checked> Remember Me
+    <p>Login with FB/Gmail?</p>
 
+    Home Page
+    <h1>Friends</h1>
+    <ul>
+      <li><a href="home">Home</a></li>
+      <li><a href="sos">SOS</a></li>
+      <li><a href="profile">My Profile</a></li>
+    </ul>
 
-<!--Home Page-->
-<h1>Friends</h1>
-<ul>
-  <li><a href="home">Home</a></li>
-  <li><a href="sos">SOS</a></li>
-  <li><a href="profile">My Profile</a></li>
-</ul>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.6616313359746!2d174.78083669593784!3d-41.294468131597405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afda8b60ae29%3A0xe3a742a32db1bc85!2sANZ%20Office!5e0!3m2!1sen!2snz!4v1598064471450!5m2!1sen!2snz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <br><p>Address</p>
 
- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.6616313359746!2d174.78083669593784!3d-41.294468131597405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afda8b60ae29%3A0xe3a742a32db1bc85!2sANZ%20Office!5e0!3m2!1sen!2snz!4v1598064471450!5m2!1sen!2snz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
- <br><p>Address</p>
+      <select name="favourites">
+        <option value="Home">Home</option>
 
-   <select name="favourites">
-    <option value="Home">Home</option>
+      </select>
+      <br>
+    <button type="button"> SOS </button>
 
-  </select>
-  <br>
-<button type="button"> SOS </button>
-
-<p>{{test}}</p>
+    <p>{{test}}</p>
+    -->
   </body>
 
 </html>
