@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+div {
+    border: 1px solid red;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    padding: 10px 10px 5px;
+}
+
+h1.app-name, p.app-statement {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.initial-nav {
+    padding: 5px;
+}
+
+.nav-button {
+    background-color: #FFDD57;
+    border: 1px solid black;
+    color: black;
+    display: inline-block;
+    margin: 5px;
+	padding: 20px;
+    text-align: center;
+    width: 150px;
+}
+.nav-button a {
+	color: black;
+	text-align: center;
+	text-decoration: none;
+}
+
+.map-div {
+    padding: 5px;
+}
+
+.map {
+    border: none;
+    height: 450px;
+    width: 100%;
+}
