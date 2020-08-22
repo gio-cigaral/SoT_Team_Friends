@@ -13,7 +13,7 @@ html, body{
 }
 
 .header {
-    padding: 10px 10px 5px;
+    padding: 20px 10px 5px;
 }
 
 h1.app-name, p.app-statement {
@@ -23,7 +23,7 @@ h1.app-name, p.app-statement {
 }
 
 .initial-nav {
-    padding: 5px;
+    padding: 10px 10px;
 }
 
 .nav-button {
@@ -32,10 +32,13 @@ h1.app-name, p.app-statement {
     color: black;
     display: inline-block;
     margin: 5px;
-	padding: 20px;
+    padding: 20px;
+    position: relative;
+    left: 5%;
     text-align: center;
     width: 150px;
 }
+
 .nav-button a {
 	color: black;
 	text-align: center;
@@ -43,7 +46,7 @@ h1.app-name, p.app-statement {
 }
 
 .map-div {
-    padding: 5px;
+    padding: 10px 20px;
 }
 
 .map {
