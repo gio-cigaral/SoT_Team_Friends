@@ -23,6 +23,7 @@ app.use(function (req, res, next) {
     })
   );
 
+
 app.get('/', function (req, res) {
   res.send('Hello World!');
 });
@@ -35,14 +36,14 @@ app.get('/test', (req, res) => {
     res.send({ express: 'node js server is working'});
 });
 
-// app.get('/test2', (req, res) => {
-//     axios.get('https://jsonplaceholder.typicode.com/todos/1%27)
-//   .then(response => {
-//     // console.log(response.data.url);
-//     // console.log(response.data.explanation);
-//     res.send(response.data);
-//   })
-//   .catch(error => {
-//     console.log(error);
-//   });
-// })
+// Test API call
+app.get('/test2', (req, res) => {
+  axios.get('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => {
+    console.log(response.data);
+    res.send(response.data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
+})
