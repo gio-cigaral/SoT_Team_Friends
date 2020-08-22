@@ -1,1 +1,1 @@
-# SoT_Team_Friends
+# Create Camp 2020 - Team Friends
