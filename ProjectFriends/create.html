@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.12/angular.js" data-semver="1.4.9"></script>
     <script src="app.js"></script>
-    <script src="../backend/index.js"></script>
+    <!-- <script src="../backend/index.js"></script> -->
+    <script src="../app.js"></script>
   </head> 
 
   <body ng-controller="MainCtrl">
@@ -15,19 +16,25 @@
 
     <div class="header">
       <h1 class="app-name">Country Roads</h1>
-      <p class="app-statement">Friends services works best when you create a profile. Securely send you location and a message to trusted family and friends</p>
+      <p class="app-statement">Country roads services works best when you create a profile. Securely send you location and a message to trusted family and friends.</p>
     </div>
 
     <div class="create-profile-form">
-      <input type="text" name="fistName" placeholder="First Name: " class="form-input">
-      <input type="text" name="lastName" placeholder="Last Name: " class="form-input">
-      <input type="text" name="email" placeholder="Email: " class="form-input">
-      <input type="text" name="phoneNumber" placeholder="Phone Number: " class="form-input">
-      <input type="text" name="email-address" placeholder="Email Address: " class="form-input">
-      <input type="password" name="password" placeholder="Create Password :" class="form-input">
-      <button type="button">Cancel</button>
-      <button type="submit">Submit</button>
-    </div>
+      <input type="text" name="fistName" placeholder="First Name: " value="" class="form-input">
+      <input type="text" name="lastName" placeholder="Last Name: " value="Junior" class="form-input">
+      <input type="text" name="email" placeholder="Email: " value="bobjunior@gmail.com" class="form-input">
+      <input type="text" name="phoneNumber" placeholder="Phone Number: " value="045672345" class="form-input">
+      <input type="text" name="home-address" placeholder="Home Address: " value="282 The Terrace, Te Aro" class="form-input">
+      <input type="password" name="password" placeholder="Create Password :" value="......" class="form-input">
+  
+      <!-- <button type="submit" onclick="submit({})">Submit</button> -->
+      <div float="right">
+        <form action="index.html">
+          <button type="submit" value="go to index page">Submit</button>
+        </form>
+      </div>
+
+     </div>
     
     <div class="create-nav">
       <br>
