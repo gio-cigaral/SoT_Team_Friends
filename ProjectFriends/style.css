@@ -2,10 +2,6 @@
     box-sizing: border-box;
 }
 
-div {
-    border: 1px solid red;
-}
-
 html, body{
     height: 100%;
     margin: 0;
@@ -13,7 +9,7 @@ html, body{
 }
 
 .header {
-    padding: 20px 10px 5px;
+    padding: 35px 10px 10px;
 }
 
 h1.app-name, p.app-statement {
@@ -22,25 +18,26 @@ h1.app-name, p.app-statement {
     text-align: center;
 }
 
-.initial-nav {
+.text-nav {
     padding: 10px 10px;
+    text-align: center;
 }
 
 .nav-button {
     background-color: #FFDD57;
-    border: 1px solid black;
+    border: none;
+    border-radius: 10px;
     color: black;
     display: inline-block;
     margin: 5px;
     padding: 20px;
-    position: relative;
-    left: 5%;
     text-align: center;
     width: 150px;
 }
 
 .nav-button a {
-	color: black;
+    color: black;
+    padding: 10px;
 	text-align: center;
 	text-decoration: none;
 }
@@ -49,8 +46,37 @@ h1.app-name, p.app-statement {
     padding: 10px 20px;
 }
 
+.destination-input {
+    margin: 10px 0 5px;
+    width: 100%;
+}
+
 .map {
     border: none;
     height: 450px;
+    margin: 10px 0 10px;
     width: 100%;
+}
+
+.sos-button {
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin: 10px 0 5px;
+    padding: 20px;
+    width: 100%;
+}
+
+.create-profile-form {
+    padding: 10px 20px;
+}
+
+.form-input {
+    margin: 10px 0 5px;
+    width: 100%;
+}
+
+.create-nav {
+    padding: 10px 20px;
 }
