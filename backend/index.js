@@ -48,3 +48,34 @@ app.get('/test2', (req, res) => {
   });
 })
 
+
+// storing user data
+function storeUserData(first, last) {
+  let firstName = first;
+  let lastName = last;
+  let address;
+  let phoneNum;
+  let emaill;
+  let dob;
+  let ethnicity;
+  console.log(firstName, lastName);
+}
+
+// var storeUserData = {
+//    firstName,
+//    lastName,
+//    address,
+//    phoneNum,
+//    emaill,
+//    dob,
+//    ethnicity
+// }
+
+
+// store default messages
+function getDefaultMessages() {
+  console.log('[firstName lastName] is in [location] and feels unsafe and may need assistance.');
+}
+
+storeUserData('Bea', 'Jayme');
+
