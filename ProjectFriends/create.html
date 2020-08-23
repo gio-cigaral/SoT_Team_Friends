@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.12/angular.js" data-semver="1.4.9"></script>
     <script src="app.js"></script>
+    <script src="../backend/index.js"></script>
   </head> 
 
   <body ng-controller="MainCtrl">
@@ -24,12 +25,13 @@
       <input type="text" name="phoneNumber" placeholder="Phone Number: " class="form-input">
       <input type="text" name="email-address" placeholder="Email Address: " class="form-input">
       <input type="password" name="password" placeholder="Create Password :" class="form-input">
+      <button type="button">Cancel</button>
+      <button type="submit">Submit</button>
     </div>
     
     <div class="create-nav">
       <br>
-      <button type="button">Cancel</button>
-      <button type="button">Next</button>
+      
     </div>
     
   </body>

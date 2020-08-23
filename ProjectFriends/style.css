@@ -44,11 +44,18 @@ h1.app-name, p.app-statement {
 
 .map-div {
     padding: 10px 20px;
+    text-align: center;
 }
 
 .destination-input {
+    display: inline-block;
     margin: 10px 0 5px;
-    width: 100%;
+    width: 70%;
+}
+
+.submit-address {
+    display: inline-block;
+    width: 20%;
 }
 
 .map {
