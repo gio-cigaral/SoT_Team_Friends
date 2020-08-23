@@ -1,3 +1,65 @@
+<html>
+   <head>
+      <title>Simple Google Map</title>
+      <style>
+         html, body { border: 0; margin: 0; padding: 0; }
+         #map { height: 100vh; width: 100vw; }
+      </style>
+   </head>
+   <body>
+      <div id="map"></div>
+      <script>
+         var map;
+         function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+               center: { lat: 37.773972, lng: -122.431297 },
+               zoom: 13
+            });
+
+            //Begin Routing
+            const directionsService = new google.maps.DirectionsService();
+            const directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map);
+            const request = {
+               origin: new google.maps.LatLng(37.80221, -122.4191),
+               destination: new google.maps.LatLng(37.76839, -122.51089),
+               travelMode: 'DRIVING'
+            };
+            directionsService.route(request, response => {
+               directionsRenderer.setDirections(response);
+            });
+         }
+      </script>
+
+     <!-- <iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAnDkri9JmfekxUh0b__8KGszE_Nfp_o88&q=Space+Needle,Seattle+WA" allowfullscreen>
+</iframe> -->
+
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnDkri9JmfekxUh0b__8KGszE_Nfp_o88&callback=initMap" async defer></script>
+   </body>
+</html>
+
+<!-- <html>
+    <head>
+        
+    </style>
+    <body> -->
+        <!-- <iframe
+  width="600"
+  height="450"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAnDkri9JmfekxUh0b__8KGszE_Nfp_o88&q=Space+Needle,Seattle+WA" allowfullscreen>
+</iframe> -->
+
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d5995.251220617314!2d174.77219062786585!3d-41.29525196709083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x6d38afda9bcf1ea5%3A0x7936a7de4ef3aadb!2sMishmosh%20Bar%2036%20Courtenay%20Place%2C%20Te%20Aro%2C%20Wellington%206011!3m2!1d-41.2935625!2d174.7822626!4m5!1s0x6d38b029aceab8dd%3A0xd59f71c9d7f31fd6!2sVictoria%20House%20The%20Terrace%2C%20Te%20Aro%2C%20Wellington!3m2!1d-41.2901309!2d174.77113369999998!5e0!3m2!1sen!2snz!4v1598148430683!5m2!1sen!2snz" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+
+</html> -->
+
 <!-- <html>
     <head>
         <meta charset="utf-8" />
@@ -124,7 +186,7 @@ This example adds OpenStreetMap as a default Google Maps base layer. Note that y
     </body>
 </html> -->
 
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
   <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css" type="text/css">
@@ -153,6 +215,43 @@ This example adds OpenStreetMap as a default Google Maps base layer. Note that y
           zoom: 4
         })
       });
+
+       var coordinates = [[8623931.28, 1449016.75],[8637791.36, 1456487.82]];
+
+  var start = ol.proj.transform(coordinates[0], 'EPSG:3857', 'EPSG:4326').reverse().toString();
+  var end = ol.proj.transform(coordinates[1], 'EPSG:3857', 'EPSG:4326').reverse().toString();
+
+  var url = "https://dev.virtualearth.net/REST/v1/Routes?wp.0=" + start + "&wp.1=" + end +
+            "&routeAttributes=routePath&key=" + bingKey;
+
+  var xhr = new XMLHttpRequest();
+
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      if (xhr.status == 200) {
+        var linestring = JSON.parse(xhr.responseText).resourceSets[0].resources[0].routePath.line.coordinates;
+        for (var i=0; i<linestring.length; i++) {
+          linestring[i].reverse();
+        }
+        var layerLines = new ol.layer.Vector({
+          source: new ol.source.Vector({
+            features: [new ol.Feature({
+              geometry: new ol.geom.LineString(linestring).transform('EPSG:4326', 'EPSG:3857'),
+              name: 'Line'
+            })]
+          }),
+        });
+        map.addLayer(layerLines);   
+      }
+    }
+  }
+
+  xhr.onerror = function(e) { console.log("error"); }
+  xhr.ontimeout = function(e) { console.log("timeout"); }
+
+  xhr.open("GET", url, true);
+  xhr.timeout = 3000;
+  xhr.send();
     </script>
   </body>
-</html>
+</html> -->
