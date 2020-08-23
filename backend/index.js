@@ -48,6 +48,17 @@ app.get('/test2', (req, res) => {
   });
 })
 
+// prints out the data
+app.get('/submit', function (req, res) {
+  console.log(req.body);
+
+  let {address} = req.body; // store variable
+  
+});
+
+// store the data
+console.log(req.body.address)
+
 
 // storing user data
 function storeUserData(first, last) {

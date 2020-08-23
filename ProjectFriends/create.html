@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.12/angular.js" data-semver="1.4.9"></script>
+    <script src="app.js"></script>
+    <script src="../backend/index.js"></script>
+  </head> 
+
+  <body ng-controller="MainCtrl">
+    <!--First Page: Creating an account-->
+
+    <div class="header">
+      <h1 class="app-name">Country Roads</h1>
+      <p class="app-statement">Friends services works best when you create a profile. Securely send you location and a message to trusted family and friends</p>
+    </div>
+
+    <div class="create-profile-form">
+      <input type="text" name="fistName" placeholder="First Name: " class="form-input">
+      <input type="text" name="lastName" placeholder="Last Name: " class="form-input">
+      <input type="text" name="email" placeholder="Email: " class="form-input">
+      <input type="text" name="phoneNumber" placeholder="Phone Number: " class="form-input">
+      <input type="text" name="email-address" placeholder="Email Address: " class="form-input">
+      <input type="password" name="password" placeholder="Create Password :" class="form-input">
+      <button type="button">Cancel</button>
+      <button type="submit">Submit</button>
+    </div>
+    
+    <div class="create-nav">
+      <br>
+      
+    </div>
+    
+  </body>
+
+</html>

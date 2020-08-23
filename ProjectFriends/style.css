@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    padding: 35px 10px 10px;
+}
+
+h1.app-name, p.app-statement {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.text-nav {
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.nav-button {
+    background-color: #FFDD57;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    display: inline-block;
+    margin: 5px;
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+}
+
+.nav-button a {
+    color: black;
+    padding: 10px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.map-div {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.destination-input {
+    display: inline-block;
+    margin: 10px 0 5px;
+    width: 70%;
+}
+
+.submit-address {
+    display: inline-block;
+    width: 20%;
+}
+
+.map {
+    border: none;
+    height: 450px;
+    margin: 10px 0 10px;
+    width: 100%;
+}
+
+.sos-button {
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin: 10px 0 5px;
+    padding: 20px;
+    width: 100%;
+}
+
+.create-profile-form {
+    padding: 10px 20px;
+}
+
+.form-input {
+    margin: 10px 0 5px;
+    width: 100%;
+}
+
+.create-nav {
+    padding: 10px 20px;
+}
